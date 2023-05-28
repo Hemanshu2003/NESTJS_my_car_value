@@ -21,7 +21,7 @@ export class UsersService {
     if (!id) {
       throw new BadRequestException('You need to login!');
     }
-    return this.repo.findOne({ id });
+    return this.repo.findOneBy({ id });
   }
 
   find(email: string) {
@@ -40,7 +40,7 @@ export class UsersService {
   }
 
   async remove(id: number) {
-    const user = await this.repo.findOne({ id });
+    const user = await this.repo.findOneBy({ id });
 
     if (!user) {
       throw new NotFoundException('User does Not Exist!');
