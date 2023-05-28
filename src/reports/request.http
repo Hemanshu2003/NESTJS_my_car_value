@@ -1,0 +1,7 @@
+POST http://localhost:3000/reports/2
+Content-Type: application/json
+
+{
+"approved" :
+
+}
